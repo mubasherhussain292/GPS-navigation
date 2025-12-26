@@ -68,6 +68,7 @@ dependencies {
     implementation ("com.mapbox.navigation:ui-maps:2.20.0")
     implementation( "com.mapbox.navigation:ui-components:2.20.0")
     implementation ("com.intuit.sdp:sdp-android:1.1.1")
-
+    implementation("com.github.anastr:speedviewlib:1.6.1")
+    implementation("com.google.android.gms:play-services-location:21.3.0")
 
 }
