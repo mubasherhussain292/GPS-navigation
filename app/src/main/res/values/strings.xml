@@ -1,3 +1,126 @@
 <resources>
     <string name="app_name">Gps Navigation</string>
+
+
+
+
+        <string name="txt_home">Home</string>
+        <string name="txt_profile">Profile</string>
+        <string name="txt_transparent"></string>
+
+        <string name="celsius_icon">°</string>
+
+
+
+
+
+        <string name="place_autocomplete_selection_error">Auto Complete Error</string>
+        <string name="onboarding_image">onboarding_image</string>
+        <string name="main_heading">Main Heading</string>
+        <string name="sub_heading_goes_here">Sub heading goes here</string>
+        <string name="subscribe">Subscribe</string>
+        <string name="start_free_trail">Start Free Trail</string>
+        <string name="country_thumbnail">Thumnail</string>
+        <string name="full_image">Full Image</string>
+        <string name="gps_navigation">GPS Navigation</string>
+        <string name="search_location">Search Location</string>
+        <string name="hi_where_are_you_going">Hi, Where are you Going?</string>
+        <string name="main_features">Main Features</string>
+        <string name="route_finder">Route Finder</string>
+        <string name="street_view">Street View</string>
+        <string name="nearby_places">Nearby Places</string>
+        <string name="pterol_pump">Petrol Pump</string>
+        <string name="hospital">Hospital</string>
+        <string name="grocery_store">Grocery Store</string>
+        <string name="bus_stop">Bus Stop</string>
+        <string name="view_all">View All</string>
+        <string name="others">Others</string>
+        <string name="tile_icon">Tile Icon</string>
+        <string name="weather">Weather</string>
+        <string name="speedometer">Speedometer</string>
+        <string name="compass">Compass</string>
+        <string name="my_location">My Location</string>
+        <string name="features">Features</string>
+        <string name="current_location">Current Location</string>
+        <string name="today_12_32_pm">Today 12:32 PM</string>
+        <string name="_30">30</string>
+        <string name="sunny">Sunny</string>
+        <string name="_9_km">9 KM</string>
+        <string name="_25">25 %</string>
+        <string name="today">Today</string>
+        <string name="_9_am">9 AM</string>
+        <string name="_12">12</string>
+        <string name="next_7_days">Next 7 Days</string>
+        <string name="monday">Monday</string>
+        <string name="_22_12">22/12</string>
+        <string name="three_sixty_view">360° View</string>
+        <string name="cafe">Cafe</string>
+        <string name="college">College</string>
+        <string name="bakery">Bakery</string>
+        <string name="discover_search_nearby">Srearch Nearby</string>
+        <string name="discover_search_in_area">Discover Search in Area</string>
+        <string name="discover_search_error">Discover Search Error</string>
+        <string name="save">save</string>
+        <string name="place_time">Place Time</string>
+        <string name="_0">0</string>
+        <string name="km_h">km/h</string>
+        <string name="avg_speed">Avg Speed</string>
+        <string name="area_calculator">Area Calculator</string>
+        <string name="tap_on_map_to_start_drawing_area">Tap on map to start drawing area</string>
+        <string name="area">Area</string>
+        <string name="reset">Reset</string>
+        <string name="undo">Undo</string>
+        <string name="copy">Copy</string>
+        <string name="converted_land_area">Converted Land Area</string>
+        <string name="kilometers_0_km">Kilometers: 0 km²</string>
+        <string name="hectares_0_ha">Hectares: 0 ha</string>
+        <string name="kanals_0">Kanals: 0</string>
+        <string name="marlas_0">Marlas: 0</string>
+        <string name="sq_feet_0">Sq.Feet: 0</string>
+        <string name="close">Close</string>
+        <string name="tap_on_map">Tap once on the map to mark a point</string>
+        <string name="slow_internet_message">Internet is not stable. Please check your connection.</string>
+        <string name="subscription_successful">Subscription Successful!</string>
+        <string name="terms_conditions">Terms and Conditions</string>
+        <string name="history">History</string>
+        <string name="in_order_to_continue">In order to continue using our app,please review and agree to GPS Navigation\'s Terms and Conditions and Privacy Policy.</string>
+        <string name="i_understand_and_agree">I have read and agree to the Terms</string>
+        <string name="latitude">Latitude</string>
+        <string name="longtitude">Longtitude</string>
+        <string name="are_you_sure_you_want_to_exit">Are you sure you want to Exit?</string>
+        <string name="no">No</string>
+        <string name="yes">Yes</string>
+        <string name="search_destination">Search Destination</string>
+        <string name="turn_left">Turn Left</string>
+        <string name="destination_location">Destination Location</string>
+        <string name="are_you_sure_you_want_to_close_navigation">Are you sure you want to close Navigation</string>
+        <string name="exit">Exit</string>
+        <string name="nearbyplaces">NearbyPlaces</string>
+        <string name="enable_location_permission">Enable Location Permission</string>
+        <string name="we_need_your_location_permission_to_show_your_current_position_nearby_places_and_accurate_navigation_routes">We need your location permission to show your current position, nearby places, and accurate navigation routes.</string>
+        <string name="current_nlocation">Current\nLocation</string>
+        <string name="accurate_nroutes">Accurate\nRoutes</string>
+        <string name="nearby_nplaces">Nearby\nPlaces</string>
+        <string name="allow_permission">Allow Permission</string>
+        <string name="skip">Skip</string>
+        <string name="start_like_a_pro">START LIKE A PRO</string>
+        <string name="unlock_all_features">Unlock All Features</string>
+        <string name="basic">Basic</string>
+        <string name="premium">Premium</string>
+        <string name="remove_ads">Remove Ads</string>
+        <string name="_3_days_free_trail">3 days free trail</string>
+        <string name="monthly">Monthly</string>
+        <string name="profile">Profile</string>
+        <string name="purchase_your_suitable_plan_and_enjoy_amazing_features">Purchase Your Suitable plan and Enjoy Amazing Features</string>
+        <string name="buy_now">Buy Now</string>
+        <string name="settings">Settings</string>
+        <string name="saved_places">Saved Places</string>
+        <string name="manage_subscription">Manage Subscription</string>
+        <string name="privacy_policy">Privacy Policy</string>
+        <string name="rate_us">Rate Us</string>
+        <string name="ride_details">Ride Details</string>
+
+
+
+
 </resources>

@@ -8,18 +8,21 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.example.gpsnavigation.R
+import com.example.gpsnavigation.adapters.OnboardingAdapter
 import com.example.gpsnavigation.databinding.ActivityOnBoardingBinding
 import com.example.gpsnavigation.models.OnboardingItem
 
 class OnBoardingActivity : AppCompatActivity() {
-    lateinit var binding : ActivityOnBoardingBinding
-    private lateinit var viewPager: ViewPager2
+
+    private lateinit var binding: ActivityOnBoardingBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         binding = ActivityOnBoardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -32,11 +35,12 @@ class OnBoardingActivity : AppCompatActivity() {
             OnboardingItem(R.drawable.ic_launcher_background, "Title 3", "Description 3")
         )
 
-        viewPager.adapter = OnboardingAdapter(items)
+        binding.viewPager.adapter = OnboardingAdapter(items)
 
         binding.btnNext.setOnClickListener {
-            if (viewPager.currentItem < items.size - 1) {
-                viewPager.currentItem += 1
+            val pager = binding.viewPager
+            if (pager.currentItem < items.size - 1) {
+                pager.currentItem = pager.currentItem + 1
             } else {
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
