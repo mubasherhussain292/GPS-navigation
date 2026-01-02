@@ -3,8 +3,8 @@ package com.example.myapplication.gpsappworktest.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gpsnavigation.databinding.ItemDetailRowBinding
 import com.example.myapplication.gpsappworktest.models.DetailRow
-import com.talymindapps.gps.maps.voice.navigation.driving.directions.databinding.ItemDetailRowBinding
 
 class DetailRowAdapter : RecyclerView.Adapter<DetailRowAdapter.VH>() {
 

@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gpsnavigation.R
 import com.example.myapplication.gpsappworktest.models.NearbyPlacesItemModel
-import com.talymindapps.gps.maps.voice.navigation.driving.directions.R
 
 class NearbyPlacesListAdapter(
     private var nearbyPlacesList: List<NearbyPlacesItemModel>,

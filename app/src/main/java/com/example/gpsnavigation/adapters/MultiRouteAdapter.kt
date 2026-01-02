@@ -4,14 +4,11 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.gpsappworktest.db.Recent
-import com.example.myapplication.gpsappworktest.utilities.setDebouncedClickListener
-import com.talymindapps.gps.maps.voice.navigation.driving.directions.R
-import org.w3c.dom.Text
 import androidx.core.graphics.toColorInt
+import androidx.recyclerview.widget.RecyclerView
+import com.example.gpsnavigation.R
+import com.example.gpsnavigation.utils.setDebouncedClickListener
 
 class MultiRouteAdapter(
     private var multipleRouteList: MutableList<String>,

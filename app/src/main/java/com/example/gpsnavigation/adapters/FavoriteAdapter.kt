@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.gpsappworktest.db.Favorite
-import com.example.myapplication.gpsappworktest.utilities.setDebouncedClickListener
-import com.talymindapps.gps.maps.voice.navigation.driving.directions.R
+import com.example.gpsnavigation.R
+import com.example.gpsnavigation.db.Favorite
+import com.example.gpsnavigation.utils.setDebouncedClickListener
 
 class FavoriteAdapter(
     private var favoriteList: MutableList<Favorite>,

@@ -5,8 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.gpsappworktest.db.NavSessionEntity
-import com.talymindapps.gps.maps.voice.navigation.driving.directions.R
+import com.example.gpsnavigation.R
+import com.example.gpsnavigation.db.NavSessionEntity
 import java.util.Locale
 
 class NavHistoryAdapter(
