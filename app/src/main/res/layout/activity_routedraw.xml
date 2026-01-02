@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.gpsappworktest.ui.RouteDrawActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.mapbox.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/relativeLayoutBelow"
+        android:layout_below="@+id/container"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayoutBelow"
+        app:layout_constraintTop_toBottomOf="@+id/container" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_below="@+id/container"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/relativelayoutroutedrawgrey"
+        android:elevation="@dimen/_3sdp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/container">
+
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            app:srcCompat="@drawable/leftarrowbg"
+            app:tint="#6c6c6c" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutSourceDestination"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/imageViewBack"
+            android:padding="@dimen/_5sdp">
+
+            <View
+                android:layout_width="@dimen/_2sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/dottedlinebg" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutStartingPoint"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/place_details_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/_3sdp">
+
+                <ImageView
+                    android:id="@+id/imageViewStaringPoint"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    app:srcCompat="@drawable/startingpointbluebg" />
+
+                <TextView
+                    android:id="@+id/textViewSource"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_toRightOf="@id/imageViewStaringPoint"
+                    android:text="Source"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutDestinationPoint"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@id/relativeLayoutStartingPoint"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/place_details_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/_3sdp">
+
+
+                <ImageView
+                    android:id="@+id/imageViewDestinationPoint"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    app:srcCompat="@drawable/destinationgreenbg" />
+
+
+                <TextView
+                    android:id="@+id/textViewDestination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_toRightOf="@id/imageViewDestinationPoint"
+                    android:text="Destination"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutRouteType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayoutTop"
+        android:layout_alignEnd="@+id/imageViewMyLocation"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayoutTop"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayoutTop"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutTop">
+
+        <ImageView
+            android:id="@+id/imageViewCar"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/carselectedbg" />
+
+
+        <ImageView
+            android:id="@+id/imageViewBike"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/bikeunselectedbg" />
+
+
+        <ImageView
+            android:id="@+id/imageViewWalk"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/walkunselectedbg" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/imageViewMyLocation"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@id/rvMultiRoute"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:elevation="@dimen/_10sdp"
+        android:src="@drawable/currentlocationbgg"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewShare"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewShare"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@id/imageViewMyLocation"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:contentDescription="@string/share"
+        android:elevation="@dimen/_10sdp"
+        android:src="@drawable/share_location_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/mapView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMultiRoute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayoutTop"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayoutBelow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/relativelayoutlocationroutebg"
+        android:elevation="@dimen/_3sdp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_above="@+id/saveLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/viewlocationroutebg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/saveLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/time_and_distance_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:text="Place Name"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewDistanceMiles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textViewTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/time_and_distance_tv"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:singleLine="true"
+                    android:text="@string/place_time"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageViewFavourite"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:contentDescription="@string/save"
+                android:src="@drawable/favunselectedbg" />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutContinue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/relativelayoutcontinueselector"
+            android:elevation="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saveLayout">
+
+            <TextView
+                android:id="@+id/textViewContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Go"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayoutContinue" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

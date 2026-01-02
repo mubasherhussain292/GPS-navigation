@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/imageViewRouteFinder"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/routefinder" />
+
+    <TextView
+        android:id="@+id/textViewRouteFinder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewRouteFinder"
+        android:layout_centerInParent="true"
+        android:text="Route Finder"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_below="@+id/textViewRouteFinder"
+        android:text="Find easy routes to your destination"
+        android:textSize="@dimen/_10sdp" />
+
+
+</RelativeLayout>

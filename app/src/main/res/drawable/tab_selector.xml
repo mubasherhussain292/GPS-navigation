@@ -1,0 +1,16 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape android:shape="oval">
+            <size android:width="@dimen/_18sdp" android:height="@dimen/_9sdp"/>
+            <solid android:color="#000000"/>
+            <padding android:left="@dimen/_12sdp" android:right="@dimen/_12sdp"/> <!-- spacing -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <size android:width="@dimen/_18sdp" android:height="@dimen/_9sdp"/>
+            <solid android:color="#AAAAAA"/>
+            <padding android:left="@dimen/_12sdp" android:right="@dimen/_12sdp"/> <!-- spacing -->
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.example.myapplication.gpsappworktest.ui.NearbyPlacesListActivity">
+
+    <FrameLayout
+        android:id="@+id/nearbyBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/nearbyBanner">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:gravity="center"
+            android:text="@string/nearby_places"
+            android:textColor="#000000"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:srcCompat="@drawable/leftarrowbg" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewOne"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@id/relativeLayoutTop"
+        android:background="#C5C5C5"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayoutTop" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNearbyPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/viewOne"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:clipToPadding="false"
+        android:paddingVertical="@dimen/_8sdp"
+        android:scrollbars="none"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/nativeAdContainer"
+        app:layout_constraintTop_toBottomOf="@+id/viewOne"
+        tools:itemCount="5"
+        tools:listitem="@layout/list_item_nearby_places" />
+
+
+    <FrameLayout
+        android:id="@+id/nativeAdContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

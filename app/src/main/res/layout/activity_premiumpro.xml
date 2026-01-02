@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Close Button -->
+    <ImageView
+        android:id="@+id/imageViewClose"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:src="@drawable/premiumprocrossbg" />
+
+    <!-- App Icon -->
+    <RelativeLayout
+        android:id="@+id/rlAppIcon"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@id/imageViewClose"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/location_icon_bg">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/location_icon" />
+
+    </RelativeLayout>
+    <!--    <ImageView-->
+    <!--        android:id="@+id/appIcon"-->
+    <!--        android:layout_width="@dimen/_50sdp"-->
+    <!--        android:layout_height="@dimen/_50sdp"-->
+    <!--        android:layout_below="@id/imageViewClose"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginTop="@dimen/_10sdp"-->
+    <!--        android:src="@drawable/premiumprobg"-->
+    <!--        android:textColor="#000000" />-->
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlAppIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/readexpro_semibold"
+        android:text="@string/start_like_a_pro"
+        android:textColor="#000000"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/readexpro_regular"
+        android:text="@string/unlock_all_features"
+        android:textColor="#000000"
+        android:textSize="@dimen/_14sdp" />
+
+    <!-- Header Row -->
+    <RelativeLayout
+        android:id="@+id/headerRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtitleText"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewBasic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_toStartOf="@id/textViewPremium"
+            android:text="@string/basic"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewPremium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/premium"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <!-- Features List -->
+    <LinearLayout
+        android:id="@+id/featureList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/textViewPriceInfo"
+        android:layout_below="@id/headerRow"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <!-- Feature: Route Finder -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imageViewRouteFinder"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/routebg" />
+
+            <TextView
+                android:id="@+id/textViewRouteFinder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/imageViewRouteFinder"
+                android:fontFamily="@font/readexpro_regular"
+                android:text="@string/route_finder"
+                android:textColor="#000000"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/imageViewBasicTick"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_toStartOf="@id/imageViewPremiumTick"
+                android:src="@drawable/checkbg" />
+
+            <ImageView
+                android:id="@+id/imageViewPremiumTick"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/checkbg" />
+
+        </RelativeLayout>
+
+        <!-- Feature: Street View -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imageViewStreetView"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/steetviewbg" />
+
+            <TextView
+                android:id="@+id/textViewStreetView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/imageViewStreetView"
+                android:fontFamily="@font/readexpro_regular"
+                android:text="@string/street_view"
+                android:textColor="#000000"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/imageViewBasicTickStreet"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_toStartOf="@id/imageViewPremiumTickStreet"
+                android:src="@drawable/checkbg" />
+
+            <ImageView
+                android:id="@+id/imageViewPremiumTickStreet"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/checkbg" />
+
+
+        </RelativeLayout>
+
+        <!-- Feature: Speedometer -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imageViewSpeedometer"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/speedometerbgg" />
+
+            <TextView
+                android:id="@+id/textViewSpeedometer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/imageViewSpeedometer"
+                android:fontFamily="@font/readexpro_regular"
+                android:text="@string/speedometer"
+                android:textColor="#000000"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageViewPremiumTickSpeed"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/checkbg" />
+
+            <ImageView
+                android:id="@+id/imageViewBasicTickSpeed"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_toStartOf="@id/imageViewPremiumTickSpeed"
+                android:src="@drawable/checkbg" />
+        </RelativeLayout>
+
+        <!-- Feature: VIP Support -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageViewVipSupport"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/vipcustomersupportbg" />
+
+            <TextView
+                android:id="@+id/textViewVipSupport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/imageViewVipSupport"
+                android:fontFamily="@font/readexpro_regular"
+                android:text="VIP Customer Support"
+                android:textColor="#000000"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageViewBasicTickVip"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_toStartOf="@id/imageViewPremiumTickVip"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/cross_icon" />
+
+            <ImageView
+                android:id="@+id/imageViewPremiumTickVip"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/checkbg" />
+
+        </RelativeLayout>
+
+        <!-- Feature: Remove Ads -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imageViewRemoveAds"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/remoteadsbg" />
+
+            <TextView
+                android:id="@+id/textViewRemoveAds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/imageViewRemoveAds"
+                android:fontFamily="@font/readexpro_regular"
+                android:text="@string/remove_ads"
+                android:textColor="#000000"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageViewPremiumTickAds"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/checkbg" />
+
+            <ImageView
+                android:id="@+id/imageViewBasicTickAds"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_toStartOf="@id/imageViewPremiumTickAds"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/cross_icon" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/premium_monthly_price_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:src="@drawable/tick_icon" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/monthly"
+                    android:textColor="#346AFF"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/tvFreeTrail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_3_days_free_trail"
+                    android:textColor="#346AFF"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#346AFF"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+    <!-- Subscription Info -->
+    <TextView
+        android:id="@+id/textViewPriceInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/textViewCancelAnyTime"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/readexpro_regular"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#888888"
+        android:textSize="@dimen/_10sdp" />
+
+
+    <!-- Cancel Anytime Text -->
+    <!-- <TextView
+         android:id="@+id/textViewCancelAnyTime"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@id/buttonStartFreeTrail"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="@dimen/_5sdp"
+         android:layout_marginBottom="@dimen/_5sdp"
+         android:fontFamily="@font/readexpro_regular"
+         android:text="Cancel anytime"
+         android:textSize="@dimen/_10sdp" />-->
+
+    <TextView
+        android:id="@+id/textViewCancelAnyTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonStartFreeTrail"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:fontFamily="@font/readexpro_regular"
+        android:gravity="center"
+        android:text="Cancel anytime"
+        android:textSize="@dimen/_10sdp"
+        android:visibility="gone" />
+
+
+    <!-- Start Trial Button -->
+    <!--    <Button-->
+    <!--        android:id="@+id/startTrialButton"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:layout_above="@id/linearLayoutLinks"-->
+    <!--        android:layout_marginTop="12dp"-->
+    <!--        android:text="Start Free Trial"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@android:color/white"-->
+    <!--        android:textStyle="bold" />-->
+
+    <Button
+        android:id="@+id/buttonStartFreeTrail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_above="@+id/linearLayoutLinks"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:backgroundTint="#3366FF"
+        android:fontFamily="@font/readexpro_regular"
+        android:text="@string/start_free_trail"
+        android:textSize="@dimen/_12sdp" />
+
+
+    <!-- Footer -->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLinks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewPrivacyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:fontFamily="@font/readexpro_regular"
+            android:text="Privacy policy"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewTermsOfService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/readexpro_regular"
+            android:text="Terms of Service"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>

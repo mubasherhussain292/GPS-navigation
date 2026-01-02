@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.example.myapplication.gpsappworktest.ui.MyLocationActivity">
+
+    <FrameLayout
+        android:id="@+id/adContainer"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/adContainer"
+        android:layout_height="@dimen/_50sdp"
+        android:gravity="center">
+
+
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:srcCompat="@drawable/leftarrowbg" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:fontFamily="@font/readexpro_semibold"
+            android:gravity="center"
+            android:text="@string/my_location"
+            android:textColor="#000000"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+
+        <ImageView
+            android:id="@+id/imageViewShare"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:srcCompat="@drawable/sharebg" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewOne"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@id/relativeLayoutTop"
+        android:background="#C5C5C5" />
+
+
+    <com.mapbox.maps.MapView
+        android:id="@+id/mapViewMyLocationActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewOne"
+        mapbox:mapbox_cameraTargetLat="-32.557013"
+        mapbox:mapbox_cameraTargetLng="-56.149056"
+        mapbox:mapbox_cameraZoom="10" />
+
+
+    <ImageView
+        android:id="@+id/imageViewMyLocation"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:elevation="@dimen/_10sdp"
+        android:src="@drawable/currentlocationbgg" />
+
+
+</RelativeLayout>

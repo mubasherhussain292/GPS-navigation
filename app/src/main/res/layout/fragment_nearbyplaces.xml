@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayoutBelow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageViewStreetView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/textViewRouteFinder"
+            android:src="@drawable/nearbyplaces" />
+
+        <TextView
+            android:id="@+id/textViewRouteFinder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textViewDetails"
+            android:layout_centerInParent="true"
+            android:text="Nearby Places"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/buttonGetStarted"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Discover nearby places around you"
+            android:textSize="@dimen/_12sdp" />
+
+        <Button
+            android:id="@+id/buttonGetStarted"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:backgroundTint="#3366FF"
+            android:fontFamily="@font/readexpro_regular"
+            android:text="Continue"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_12sdp" />
+
+
+    </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutBannerNearbyPlacesFragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+</LinearLayout>

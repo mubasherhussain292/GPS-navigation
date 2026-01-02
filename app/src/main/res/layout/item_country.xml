@@ -1,0 +1,63 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_6sdp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="@dimen/_12sdp"
+    app:cardElevation="@dimen/_6sdp">
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_margin="@dimen/_8sdp"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/thumbnail"-->
+    <!--            android:layout_width="60dp"-->
+    <!--            android:layout_height="60dp"-->
+    <!--            android:contentDescription="@string/country_thumbnail"-->
+    <!--            android:scaleType="centerCrop" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/countryName"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="16dp"-->
+    <!--            android:fontFamily="@font/readexpro_semibold"-->
+    <!--            android:includeFontPadding="false"-->
+    <!--            android:text="Country Name"-->
+    <!--            android:textColor="@android:color/black"-->
+    <!--            android:textSize="@dimen/_12sdp" />-->
+
+    <!--    </LinearLayout>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Background image -->
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:contentDescription="@string/country_thumbnail"
+            android:scaleType="centerCrop" />
+
+        <!-- Foreground text -->
+        <TextView
+            android:id="@+id/countryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="#80D3D3D3"
+            android:fontFamily="@font/readexpro_semibold"
+            android:text="Australia"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_14sdp" />
+    </FrameLayout>
+
+</com.google.android.material.card.MaterialCardView>

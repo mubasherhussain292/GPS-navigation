@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/homeBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeBanner">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@id/relativeLayoutTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="#FFFFFF">
+
+                <ImageView
+                    android:id="@+id/imageViewSetting"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/settingbg" />
+
+                <TextView
+                    android:id="@+id/textViewGPSNavigation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/readexpro_semibold"
+                    android:text="@string/gps_navigation"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageViewDashboardPro"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/dashboardprobg"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/historyIcon"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_history_icon" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/searchMainFeatures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayoutTop"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/relativeLayoutSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:foreground="?selectableItemBackground"
+                    android:layout_below="@+id/relativeLayoutTop"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/searchlayoutbg"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_12sdp">
+
+                    <ImageView
+                        android:id="@+id/imageViewSearch"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:src="@drawable/searchbg" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/readexpro_semibold"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:text="@string/search_location"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/readexpro_light"
+                            android:includeFontPadding="false"
+                            android:maxLines="2"
+                            android:text="@string/hi_where_are_you_going"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/imageViewVoice"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:src="@drawable/voicebg" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvMainFeatures"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayoutSearch"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/readexpro_semibold"
+                    android:includeFontPadding="false"
+                    android:text="@string/main_features"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/linearlayoutMainFeatures"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_below="@+id/tvMainFeatures"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutRouteFinder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:foreground="?selectableItemBackground"
+                        android:layout_weight="1"
+                        android:background="@drawable/route_finder_layout_bg"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:src="@drawable/routefinderbg"
+                            app:cardBackgroundColor="#6C50FC"
+                            app:cardCornerRadius="@dimen/_50sdp"
+                            app:cardElevation="@dimen/_8sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/route_finder_icon" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/route_finder"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutStreetView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foreground="?selectableItemBackground"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/street_view_layout_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:src="@drawable/routefinderbg"
+                            app:cardBackgroundColor="#02AF72"
+                            app:cardCornerRadius="@dimen/_50sdp"
+                            app:cardElevation="@dimen/_8sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/street_view_icon" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/street_view"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearlayoutNearbyPlacesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/searchMainFeatures"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/nearby_places"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/tvViewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:foreground="?selectableItemBackground"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/readexpro_regular"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:text="@string/view_all"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayoutNearbyPlaces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearlayoutNearbyPlacesText"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- Petrol Pump -->
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutPetrolPump"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:backgroundTint="#210073B6"
+                        app:cardCornerRadius="@dimen/_20sdp"
+                        app:cardUseCompatPadding="false">
+
+                        <ImageView
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/pterol_pump"
+                            android:src="@drawable/gas_station_icon" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:fontFamily="@font/readexpro_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/pterol_pump"
+                        android:textSize="@dimen/_8sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Hospital -->
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutHospital"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:backgroundTint="#210073B6"
+                        app:cardCornerRadius="@dimen/_20sdp"
+                        app:cardUseCompatPadding="false">
+
+                        <ImageView
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/hospital"
+                            android:src="@drawable/hospital_icon" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:fontFamily="@font/readexpro_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/hospital"
+                        android:textSize="@dimen/_8sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Grocery Store -->
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutGroceryStore"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:backgroundTint="#210073B6"
+                        app:cardCornerRadius="@dimen/_20sdp"
+                        app:cardUseCompatPadding="false">
+
+                        <ImageView
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/grocery_store"
+                            android:src="@drawable/grocery_store_icon" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:fontFamily="@font/readexpro_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/grocery_store"
+                        android:textSize="@dimen/_8sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Bus Stop -->
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutBusStop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:backgroundTint="#210073B6"
+                        app:cardCornerRadius="@dimen/_20sdp"
+                        app:cardUseCompatPadding="false">
+
+                        <ImageView
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/bus_stop"
+                            android:src="@drawable/bus_station_icon" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:fontFamily="@font/readexpro_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/bus_stop"
+                        android:textSize="@dimen/_8sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/nativeAdContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearlayoutNearbyPlaces"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nativeAdContainer"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:includeFontPadding="false"
+                android:text="@string/others"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_340sdp"
+                android:layout_below="@+id/tvOthers"
+                android:columnCount="2"
+                android:padding="@dimen/_5sdp"
+                android:rowCount="4">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutWeather"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:foreground="?selectableItemBackground"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:background="@drawable/bg_tile_weather"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_8sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:src="@drawable/weather_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:includeFontPadding="false"
+                        android:text="@string/weather"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutSpeedometer"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:foreground="?selectableItemBackground"
+                    android:background="@drawable/bg_tile_speedometer"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_8sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:contentDescription="@string/tile_icon"
+                        android:src="@drawable/speedometer_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="@string/speedometer"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutCompass"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:foreground="?selectableItemBackground"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:background="@drawable/bg_tile_compass"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_8sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:contentDescription="@string/tile_icon"
+                        android:src="@drawable/compass_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="@string/compass"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutMyLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:foreground="?selectableItemBackground"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:background="@drawable/bg_tile_my_location"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_8sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:contentDescription="@string/tile_icon"
+                        android:src="@drawable/my_location_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="@string/my_location"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutThreeSixtyView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:foreground="?selectableItemBackground"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:background="@drawable/bg_tile_three_sixty_view"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_8sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:contentDescription="@string/tile_icon"
+                        android:src="@drawable/three_sixty_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="@string/three_sixty_view"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutAreaCalculator"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:foreground="?selectableItemBackground"
+                    android:background="@drawable/bg_tile_my_location"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:contentDescription="@string/tile_icon"
+                        android:src="@drawable/area_calculator_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="@string/area_calculator"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearHistory"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:visibility="gone"
+                    android:layout_columnWeight="1"
+                    android:foreground="?selectableItemBackground"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:background="@drawable/bg_tile_three_sixty_view"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_8sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:contentDescription="@string/tile_icon"
+                        android:src="@drawable/tab_history" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="@string/history"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </GridLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

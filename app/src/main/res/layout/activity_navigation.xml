@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <com.mapbox.maps.MapView
+        android:id="@+id/mapViewNavigationActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/relativeLayoutNewContinue"
+        android:layout_below="@+id/container" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutInstructionsSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_below="@+id/container"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/relativelayoutnavigationwhiteinstructionsbg">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutInstructionsText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/relativelayoutnavigationinstructionsbg"
+            android:elevation="@dimen/_6sdp">
+
+            <ImageView
+                android:id="@+id/imageViewTurnInstruction"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:src="@drawable/turnleftinstructionsbg" />
+
+            <TextView
+                android:id="@+id/textViewInstructionsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_toStartOf="@id/imageViewSound"
+                android:layout_toEndOf="@id/imageViewTurnInstruction"
+                android:text="@string/turn_left"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/imageViewSound"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:scaleType="centerInside"
+                android:visibility="visible"
+                app:srcCompat="@drawable/navigationsoundbg" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/textViewSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayoutInstructionsText"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textViewSpeedUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayoutInstructionsText"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@id/textViewSpeed"
+            android:text=" Km"
+            android:textColor="#000000"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textViewSpeedFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayoutInstructionsText"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@id/textViewSpeedUnit"
+            android:text="Speed"
+            android:textColor="#000000"
+            android:textSize="@dimen/_16sdp"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutDistanceUnit"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_below="@id/relativeLayoutInstructionsText"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageViewDistanceUnit"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/distanceunitbg" />
+
+            <TextView
+                android:id="@+id/textViewDistanceUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_toStartOf="@id/imageViewDistanceUnit"
+                android:text="KM"
+                android:textColor="#000000"
+                android:textSize="@dimen/_10sdp" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageViewMyLocation"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_above="@id/relativeLayoutNewContinue"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:elevation="@dimen/_3sdp"
+        android:src="@drawable/currentlocationbgg" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutNewContinue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/relativelayoutlocationroutebg"
+        android:elevation="@dimen/_3sdp"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/viewCenter"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/viewlocationroutebg" />
+
+
+        <ImageView
+            android:id="@+id/imageButtonDrive"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/viewCenter"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:srcCompat="@drawable/carselectedbg" />
+
+        <TextView
+            android:id="@+id/textViewRemainingDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewCenter"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentEnd="true"
+            android:textColor="#000000"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textViewDestinationLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageButtonDrive"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="@string/destination_location"
+            android:textColor="#000000"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewDestinationLocation"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Time"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/imageButtonStop"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_above="@id/textViewTime"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/circular_backgroundred"
+            android:padding="@dimen/_3sdp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/navigationbuttonstop" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutExit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_210sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/relativelayoutlocationroutebg"
+        android:elevation="@dimen/_3sdp"
+        android:visibility="invisible">
+
+        <View
+            android:id="@+id/viewOne"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_above="@+id/imageViewExit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/viewlocationroutebg" />
+
+        <ImageView
+            android:id="@+id/imageViewExit"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_above="@id/textViewMapTypes"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/exitimagebg" />
+
+
+        <TextView
+            android:id="@+id/textViewMapTypes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/textViewNavigation"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="@string/exit"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textViewNavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayoutBelow"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:text="@string/are_you_sure_you_want_to_close_navigation" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutBelow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutNo"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/exitnobg"
+                android:elevation="@dimen/_3sdp">
+
+                <TextView
+                    android:id="@+id/textViewStop"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="@dimen/_3sdp"
+                    android:gravity="center"
+                    android:text="@string/no"
+                    android:textColor="#1088F6" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutYes"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/exityesbg"
+                android:elevation="@dimen/_3sdp">
+
+                <TextView
+                    android:id="@+id/textViewYes"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:elevation="@dimen/_3sdp"
+                    android:gravity="center"
+                    android:text="@string/yes"
+                    android:textColor="#FFFFFF" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

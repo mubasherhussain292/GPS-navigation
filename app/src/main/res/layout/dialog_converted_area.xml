@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_white_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_12sdp"
+        android:fontFamily="@font/readexpro_semibold"
+        android:includeFontPadding="false"
+        android:text="@string/converted_land_area"
+        android:textColor="#000000"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/kmText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:fontFamily="@font/readexpro_regular"
+        android:includeFontPadding="false"
+        android:text="@string/kilometers_0_km"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/hectareText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:fontFamily="@font/readexpro_regular"
+        android:includeFontPadding="false"
+        android:text="@string/hectares_0_ha"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/kanalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:fontFamily="@font/readexpro_regular"
+        android:includeFontPadding="false"
+        android:text="@string/kanals_0"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/marlaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:fontFamily="@font/readexpro_regular"
+        android:includeFontPadding="false"
+        android:text="@string/marlas_0"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/sqFeetText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:fontFamily="@font/readexpro_regular"
+        android:includeFontPadding="false"
+        android:text="@string/sq_feet_0"
+        android:textSize="@dimen/_12sdp" />
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/close" />
+</LinearLayout>

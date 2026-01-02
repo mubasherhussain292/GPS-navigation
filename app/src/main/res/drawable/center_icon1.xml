@@ -1,0 +1,82 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="60dp"
+    android:viewportWidth="60"
+    android:viewportHeight="60">
+    <path
+        android:pathData="M30,30m-26,0a26,26 0,1 1,52 0a26,26 0,1 1,-52 0"
+        android:strokeWidth="4"
+        android:fillColor="#fd7900"
+        android:strokeColor="#00000000"/>
+    <path
+        android:pathData="M30,30m-28,0a28,28 0,1 1,56 0a28,28 0,1 1,-56 0"
+        android:strokeWidth="4"
+        android:fillColor="#00000000"
+        android:strokeColor="#fff"/>
+    <group>
+        <clip-path android:pathData="M17,18h26v26h-26z M 0,0"/>
+        <group>
+            <clip-path android:pathData="M30,39.514a8.515,8.515 0,0 0,8.515 -8.515A8.515,8.515 0,0 0,30 22.485,8.515 8.515,0 0,0 21.485,31 8.515,8.515 0,0 0,30 39.514Z M 0,0"/>
+            <group>
+                <clip-path android:pathData="M17.228,43.772L42.772,43.772L42.772,18.228L17.228,18.228Z M 0,0"/>
+                <path
+                    android:pathData="M14.39,15.39L45.61,15.39L45.61,46.61L14.39,46.61Z"
+                    android:fillColor="#fff"/>
+            </group>
+        </group>
+        <group>
+            <clip-path android:pathData="M30,36.677a5.676,5.676 0,0 0,5.676 -5.676A5.676,5.676 0,0 0,30 25.324,5.676 5.676,0 0,0 24.324,31 5.676,5.676 0,0 0,30 36.677Z M 0,0"/>
+            <group>
+                <clip-path android:pathData="M17.228,43.772L42.772,43.772L42.772,18.228L17.228,18.228Z M 0,0"/>
+                <path
+                    android:pathData="M17.228,18.228L42.772,18.228L42.772,43.772L17.228,43.772Z"
+                    android:fillColor="#fd7900"/>
+            </group>
+        </group>
+        <group>
+            <clip-path android:pathData="M30,33.838a2.838,2.838 0,0 0,2.838 -2.838A2.838,2.838 0,0 0,30 28.162,2.838 2.838,0 0,0 27.162,31 2.838,2.838 0,0 0,30 33.838Z M 0,0"/>
+            <group>
+                <clip-path android:pathData="M17.228,43.772L42.772,43.772L42.772,18.228L17.228,18.228Z M 0,0"/>
+                <path
+                    android:pathData="M20.066,21.066L39.934,21.066L39.934,40.934L20.066,40.934Z"
+                    android:fillColor="#fff"/>
+            </group>
+        </group>
+        <group>
+            <clip-path android:pathData="M42.772,29.581L37.096,29.581v2.838h5.676Z M 0,0"/>
+            <group>
+                <clip-path android:pathData="M17.228,43.772L42.772,43.772L42.772,18.228L17.228,18.228Z M 0,0"/>
+                <path
+                    android:pathData="M30,22.485L49.868,22.485L49.868,39.514L30,39.514Z"
+                    android:fillColor="#fff"/>
+            </group>
+        </group>
+        <group>
+            <clip-path android:pathData="M22.904,29.581L17.228,29.581v2.838L22.904,32.419Z M 0,0"/>
+            <group>
+                <clip-path android:pathData="M17.228,43.772L42.772,43.772L42.772,18.228L17.228,18.228Z M 0,0"/>
+                <path
+                    android:pathData="M10.132,22.485L30,22.485L30,39.514L10.132,39.514Z"
+                    android:fillColor="#fff"/>
+            </group>
+        </group>
+        <group>
+            <clip-path android:pathData="M31.419,23.904L31.419,18.228L28.581,18.228v5.676Z M 0,0"/>
+            <group>
+                <clip-path android:pathData="M17.228,43.772L42.772,43.772L42.772,18.228L17.228,18.228Z M 0,0"/>
+                <path
+                    android:pathData="M38.514,11.132L38.514,31L21.485,31L21.485,11.132Z"
+                    android:fillColor="#fff"/>
+            </group>
+        </group>
+        <group>
+            <clip-path android:pathData="M31.419,43.772L31.419,38.096L28.581,38.096L28.581,43.772Z M 0,0"/>
+            <group>
+                <clip-path android:pathData="M17.228,43.772L42.772,43.772L42.772,18.228L17.228,18.228Z M 0,0"/>
+                <path
+                    android:pathData="M38.514,31L38.514,50.868L21.485,50.868L21.485,31Z"
+                    android:fillColor="#fff"/>
+            </group>
+        </group>
+    </group>
+</vector>

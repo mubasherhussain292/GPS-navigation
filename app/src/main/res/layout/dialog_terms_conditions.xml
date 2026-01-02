@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_24sdp"
+    android:background="@drawable/rounded_white_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_12sdp"
+        android:fontFamily="@font/readexpro_semibold"
+        android:includeFontPadding="false"
+        android:text="@string/terms_conditions"
+        android:textColor="#000000"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
+        android:contentDescription="@string/area_calculator"
+        android:src="@drawable/terms_and_conditions" />
+
+    <TextView
+        android:id="@+id/tvTermsConditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_12sdp"
+        android:fontFamily="@font/readexpro_light"
+        android:includeFontPadding="false"
+        android:text="@string/in_order_to_continue"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp" />
+
+    <!-- ✅ Inline CheckBox with text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBoxConfirm"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp" />
+
+        <TextView
+            android:id="@+id/tvCheckText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:fontFamily="@font/readexpro_light"
+            android:includeFontPadding="false"
+            android:text="@string/i_understand_and_agree"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_10sdp" />
+    </LinearLayout>
+
+    <Button
+        android:backgroundTint="#346AFF"
+        android:id="@+id/closeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Continue" />
+</LinearLayout>
