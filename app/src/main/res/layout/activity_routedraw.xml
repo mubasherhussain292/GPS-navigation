@@ -197,7 +197,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_8sdp"
-        android:contentDescription="@string/share"
+        android:contentDescription="Share"
         android:elevation="@dimen/_10sdp"
         android:src="@drawable/share_location_icon"
         app:layout_constraintBottom_toBottomOf="@+id/mapView"

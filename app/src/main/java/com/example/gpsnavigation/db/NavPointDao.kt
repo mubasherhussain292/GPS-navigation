@@ -3,7 +3,7 @@ package com.example.gpsnavigation.db
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.myapplication.gpsappworktest.models.NavPointEntity
+import com.example.gpsnavigation.models.NavPointEntity
 
 @Dao
 interface NavPointDao {

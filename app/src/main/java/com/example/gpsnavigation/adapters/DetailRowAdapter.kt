@@ -1,4 +1,4 @@
-package com.example.myapplication.gpsappworktest.adapters
+package com.example.gpsnavigation.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

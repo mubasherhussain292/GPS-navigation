@@ -3,4 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blueroutedrawselected">#346AFF</color>
+    <color name="gray">#6C6D6D</color>
+    <color name="gray_btn_bg_color">#6C6D6D</color>
+    <color name="colorPrimary">#346AFF</color>
 </resources>

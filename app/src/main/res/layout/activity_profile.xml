@@ -171,7 +171,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:fontFamily="@font/readexpro_semibold"
                 android:text="@string/settings"
                 android:textSize="@dimen/_14sdp"
                 android:textStyle="bold" />
@@ -200,7 +199,6 @@
                     android:layout_centerInParent="true"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_toEndOf="@id/imageViewSavedPlaces"
-                    android:fontFamily="@font/readexpro_regular"
                     android:text="@string/saved_places"
                     android:textSize="@dimen/_12sdp" />
             </RelativeLayout>
@@ -238,7 +236,6 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_toEndOf="@id/imageViewSpeedUnit"
-                    android:fontFamily="@font/readexpro_regular"
                     android:text="Speed Unit"
                     android:textSize="@dimen/_12sdp" />
 
@@ -249,7 +246,6 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/_10sdp"
-                    android:fontFamily="@font/readexpro_regular"
                     android:text="KM"
                     android:textColor="#000000"
                     android:textSize="@dimen/_12sdp" />
@@ -289,7 +285,6 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_toEndOf="@id/imageViewTemperatureUnit"
-                    android:fontFamily="@font/readexpro_regular"
                     android:text="Temperature Unit"
                     android:textSize="@dimen/_12sdp" />
 
@@ -300,7 +295,6 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/_10sdp"
-                    android:fontFamily="@font/readexpro_regular"
                     android:text="°C"
                     android:textColor="#000000"
                     android:textSize="@dimen/_12sdp" />
@@ -354,7 +348,6 @@
                     android:layout_centerInParent="true"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_toEndOf="@id/rlManageSubscriptionIcon"
-                    android:fontFamily="@font/readexpro_regular"
                     android:text="@string/manage_subscription"
                     android:textSize="@dimen/_12sdp" />
             </RelativeLayout>
@@ -390,7 +383,6 @@
                     android:layout_centerInParent="true"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_toEndOf="@id/imageViewPrivacyPolicy"
-                    android:fontFamily="@font/readexpro_regular"
                     android:text="@string/privacy_policy"
                     android:textSize="@dimen/_12sdp" />
             </RelativeLayout>
@@ -426,7 +418,6 @@
                     android:layout_centerInParent="true"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_toEndOf="@id/imageViewRateUs"
-                    android:fontFamily="@font/readexpro_regular"
                     android:text="@string/rate_us"
                     android:textSize="@dimen/_12sdp" />
             </RelativeLayout>
@@ -463,7 +454,6 @@
                     android:layout_centerInParent="true"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_toEndOf="@id/imageViewExitSettings"
-                    android:fontFamily="@font/readexpro_regular"
                     android:text="@string/exit"
                     android:textSize="@dimen/_12sdp" />
             </RelativeLayout>
@@ -477,7 +467,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:fontFamily="@font/readexpro_regular"
         android:includeFontPadding="false"
         android:paddingVertical="@dimen/_8sdp"
         android:text="Version"

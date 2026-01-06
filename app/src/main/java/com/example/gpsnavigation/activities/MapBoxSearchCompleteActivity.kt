@@ -834,7 +834,7 @@ class MapBoxSearchCompleteActivity : AppCompatActivity() {
                 .withCircleStrokeColor("#ffffff")
 
             val annotation = circleAnnotationManager.create(circleAnnotationOptions)
-            markers[annotation.id] set coordinate
+//            markers[annotation.id] set coordinate
 
             CameraOptions.Builder()
                 .center(coordinate)

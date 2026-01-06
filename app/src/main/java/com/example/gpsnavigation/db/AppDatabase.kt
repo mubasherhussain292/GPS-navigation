@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.myapplication.gpsappworktest.db.RecentDao
-import com.example.myapplication.gpsappworktest.models.NavPointEntity
+import com.example.gpsnavigation.models.NavPointEntity
 
 @Database(
     entities = [

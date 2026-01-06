@@ -1,14 +1,18 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("kotlin-parcelize")
     id("kotlin-kapt")
-
 }
 
 android {
     namespace = "com.example.gpsnavigation"
     compileSdk = 36
+
+    // Put ndkVersion at android-level (recommended)
+    ndkVersion = "27.0.11718014"
 
     defaultConfig {
         applicationId = "com.example.gpsnavigation"
@@ -16,21 +20,25 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        ndkVersion = "27.0.11718014"
+
         ndk {
             abiFilters += listOf("armeabi-v7a", "arm64-v8a")
         }
-        lint {
-            disable += listOf("NullSafeMutableLiveData")
-        }
     }
 
-    buildFeatures{
+    // Lint config belongs to android-level, NOT inside defaultConfig
+    lint {
+        disable += "NullSafeMutableLiveData"
+    }
+
+    buildFeatures {
         viewBinding = true
     }
 
-    packagingOptions {
+    // AGP newer DSL (recommended)
+    packaging {
         jniLibs {
             useLegacyPackaging = false
         }
@@ -45,12 +53,19 @@ android {
             )
         }
     }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "11"
+}
+
+/**
+ * Kotlin 2.x: migrate away from kotlinOptions { jvmTarget = "17" }
+ */
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
     }
 }
 
@@ -81,7 +96,7 @@ dependencies {
     implementation("com.mapbox.search:discover-ndk27:2.17.1")
     implementation("com.mapbox.search:place-autocomplete-ndk27:2.17.1")
 
-    // Mapbox Navigation (only if you actually use Navigation APIs)
+    // Mapbox Navigation
     implementation("com.mapbox.navigationcore:android-ndk27:3.17.0-rc.2")
 
     // Networking

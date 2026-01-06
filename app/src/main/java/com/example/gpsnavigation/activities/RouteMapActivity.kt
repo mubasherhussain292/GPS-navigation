@@ -76,7 +76,8 @@ class RouteMapActivity : AppCompatActivity() {
                 Toast.makeText(this, "Origin/Destination missing", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            NavigationActivity.start(this, o, d)
+            val intent = Intent(this, NavigationActivity::class.java)
+            startActivity(intent)
         }
 
         binding.mapView.mapboxMap.loadStyle(Style.STANDARD) { style ->

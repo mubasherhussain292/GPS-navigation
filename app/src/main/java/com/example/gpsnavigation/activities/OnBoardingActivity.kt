@@ -6,7 +6,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.viewpager2.widget.ViewPager2
 import com.example.gpsnavigation.R
 import com.example.gpsnavigation.adapters.OnboardingAdapter
 import com.example.gpsnavigation.databinding.ActivityOnBoardingBinding
@@ -15,6 +14,7 @@ import com.example.gpsnavigation.models.OnboardingItem
 class OnBoardingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityOnBoardingBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -16,22 +16,25 @@
         android:theme="@style/Theme.GpsNavigation"
         tools:targetApi="31">
         <activity
+            android:name=".activities.CompassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MapBoxSearchCompleteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RouteDrawActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.NavigationActivity"
             android:exported="false" />
         <activity
             android:name=".activities.RouteMapActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.RouteInputActivity"
-            android:exported="false" />
-        <activity
             android:name=".activities.CurrentLocationActivity"
             android:exported="false" />
         <activity
             android:name=".activities.SpeedometerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.CompassActivity"
             android:exported="false" />
         <activity
             android:name=".activities.OnBoardingActivity"

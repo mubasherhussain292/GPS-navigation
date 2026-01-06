@@ -1,10 +1,10 @@
-package com.example.myapplication.gpsappworktest.models
+package com.example.gpsnavigation.models
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import com.example.myapplication.gpsappworktest.db.NavSessionEntity
+import com.example.gpsnavigation.db.NavSessionEntity
 
 @Entity(
     tableName = "nav_point",

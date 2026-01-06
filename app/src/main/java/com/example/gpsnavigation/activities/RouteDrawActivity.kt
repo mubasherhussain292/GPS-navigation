@@ -39,14 +39,10 @@ import com.example.gpsnavigation.db.AppDatabase
 import com.example.gpsnavigation.db.Favorite
 import com.example.gpsnavigation.db.FavoriteDao
 import com.example.gpsnavigation.db.Recent
+import com.example.gpsnavigation.mapboxresponse.MapboxResponse
 import com.example.gpsnavigation.utils.MyConstants
 import com.example.gpsnavigation.utils.setDebouncedClickListener
-import com.example.myapplication.gpsappworktest.utilities.Utils.logUserEvent
 import com.example.myapplication.gpsappworktest.adapters.MultiRouteAdapter
-import com.example.myapplication.gpsappworktest.ads.loadAdaptiveBanner
-import com.example.gpsnavigation.mapboxresponse.MapboxResponse
-import com.example.myapplication.gpsappworktest.utilities.AdsRemoteConfig
-import com.example.myapplication.gpsappworktest.utilities.NewAdsManagerUpdated
 import com.fasterxml.jackson.core.JsonFactory
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -85,7 +81,6 @@ import com.mapbox.maps.plugin.gestures.gestures
 import com.mapbox.maps.plugin.locationcomponent.OnIndicatorBearingChangedListener
 import com.mapbox.maps.plugin.locationcomponent.OnIndicatorPositionChangedListener
 import com.mapbox.maps.plugin.locationcomponent.location
-import com.talymindapps.gps.maps.voice.navigation.driving.directions.BuildConfig
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -93,14 +88,6 @@ import kotlinx.coroutines.withContext
 import okhttp3.Response
 import java.text.DateFormat
 import java.util.Date
-import kotlin.collections.forEach
-import kotlin.collections.forEachIndexed
-import kotlin.collections.isNotEmpty
-import kotlin.collections.map
-import kotlin.collections.maxBy
-import kotlin.collections.minBy
-import kotlin.jvm.java
-import kotlin.let
 import kotlin.math.atan2
 import kotlin.math.cos
 import kotlin.math.max
@@ -108,13 +95,6 @@ import kotlin.math.min
 import kotlin.math.pow
 import kotlin.math.sin
 import kotlin.math.sqrt
-import kotlin.ranges.coerceIn
-import kotlin.ranges.until
-import kotlin.text.equals
-import kotlin.text.format
-import kotlin.text.isNullOrBlank
-import kotlin.text.toDouble
-import kotlin.to
 
 class RouteDrawActivity : AppCompatActivity() {
 
@@ -460,33 +440,12 @@ class RouteDrawActivity : AppCompatActivity() {
         }*/
 
 
-        if (AdsRemoteConfig.banneronMapNavigation_control) {
-            if (BuildConfig.DEBUG) {
-                container.loadAdaptiveBanner(this, "ca-app-pub-3940256099942544/6300978111")
-            } else {
-                logUserEvent(
-                    this@RouteDrawActivity, "routedraw_banner", mapOf(
-                        "button_name" to "RouteDrawActivity",
-                        "screen" to "RouteDrawActivity"
-                    )
-                )
-                container.loadAdaptiveBanner(this, AdsRemoteConfig.navigationscreenbannerid)
-            }
-        }
-
     }
 
     private fun handleRouteClickScreen(
         clickedScreen: ScreenCoordinate,
         mapboxMap: MapboxMap
     ) {
-
-        logUserEvent(
-            this@RouteDrawActivity, "route_change_click", mapOf(
-                "button_name" to "RouteDrawActivity",
-                "screen" to "RouteDrawActivity"
-            )
-        )
 
         val response = MyConstants.mapboxResponse
         if (response == null || response.routes.isEmpty()) return
@@ -595,30 +554,8 @@ class RouteDrawActivity : AppCompatActivity() {
             }
     }
 
-    private fun callNavigationActivityWithAds() {
-
-        NewAdsManagerUpdated.getInstance().showInterstitialAd(this) {
-
-            val intent = Intent(
-                this@RouteDrawActivity,
-                NavigationActivity::class.java
-            )
-
-            // Assuming routeType is a String? variable defined in RouteDrawActivity
-            intent.putExtra("routetype", routeType)
-
-            startActivity(intent)
-        }
-
-    }
-
     private fun initMap() {
-        logUserEvent(
-            this@RouteDrawActivity, "map_route_draw", mapOf(
-                "no_button" to "no_button",
-                "screen" to "RouteDrawActivity"
-            )
-        )
+
         try {
 
             mapView?.getMapboxMap()?.loadStyleUri(MAPBOX_STREETS) { style ->
@@ -1109,13 +1046,6 @@ class RouteDrawActivity : AppCompatActivity() {
 
     private fun drawAllRoutes(mapboxResponse: MapboxResponse) {
 
-        logUserEvent(
-            this@RouteDrawActivity, "route_draw", mapOf(
-                "button_name" to "RouteDrawActivity",
-                "screen" to "RouteDrawActivity"
-            )
-        )
-
         val mapboxMap = mapView?.getMapboxMap() ?: return
 
         mapboxMap.getStyle { style ->
@@ -1146,7 +1076,7 @@ class RouteDrawActivity : AppCompatActivity() {
                 val routeColor = if (index == selectedRouteIndex)
                     ContextCompat.getColor(this, R.color.colorPrimary)
                 else
-                    ContextCompat.getColor(this, R.color.blueroutedrawunselected)
+                    ContextCompat.getColor(this, android.R.color.transparent)
 
                 val routeLayer = LineLayer("route-layer-$index", "route-source-$index")
                     .lineJoin(LineJoin.ROUND)
