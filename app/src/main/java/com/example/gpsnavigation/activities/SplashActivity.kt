@@ -82,6 +82,7 @@ class SplashActivity : AppCompatActivity() {
                 }
             }
         } ?: run {
+
             // Timeout happened: still safe to proceed (optional fallback preload)
             preloadOnboardingInterstitialFromSplashFallback()
         }
