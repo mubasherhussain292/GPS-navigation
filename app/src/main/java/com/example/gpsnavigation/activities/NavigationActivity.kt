@@ -26,11 +26,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.gpsnavigation.R
+import com.example.gpsnavigation.ads.loadAdaptiveBanner
 import com.example.gpsnavigation.db.AppDatabase
 import com.example.gpsnavigation.db.NavSessionEntity
 import com.example.gpsnavigation.extensions.reverseGeocodeName
 import com.example.gpsnavigation.mapboxresponse.MapboxResponse
 import com.example.gpsnavigation.mapboxresponse.Steps
+import com.example.gpsnavigation.utils.AdsRemoteConfig
 import com.example.gpsnavigation.utils.MyConstants
 import com.example.gpsnavigation.utils.setDebouncedClickListener
 import com.mapbox.android.gestures.MoveGestureDetector
@@ -166,6 +168,21 @@ class NavigationActivity : AppCompatActivity() {
         relativeLayoutNo = findViewById(R.id.relativeLayoutNo)
         imageButtonDrive = findViewById(R.id.imageButtonDrive)
         container = findViewById(R.id.container)
+
+        if (AdsRemoteConfig.GPS_features_banner_control) {
+            /*if (BuildConfig.DEBUG) {
+                container.loadAdaptiveBanner(this, "ca-app-pub-3940256099942544/6300978111")
+            } else {*/
+                /*logUserEvent(
+                    this, "navigation_banner", mapOf(
+                        "button_name" to "navigation",
+                        "screen" to "navigation"
+                    )
+                )*/
+                container.loadAdaptiveBanner(this, AdsRemoteConfig.GPS_features_banner_id)
+
+
+        }
 
 
         if (MyConstants.currentLatLng != null && MyConstants.destLatLng != null) {

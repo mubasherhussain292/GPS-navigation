@@ -5,10 +5,50 @@ import android.location.Geocoder
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import androidx.datastore.preferences.core.booleanPreferencesKey
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.util.Locale
 import java.util.concurrent.CountDownLatch
+
+private val Context.gpsDataStore by preferencesDataStore(name = GPS_PREFS_STORE_NAME)
+private const val GPS_PREFS_STORE_NAME = "gps_navigation_prefs"
+private const val GPS_SHARED_PREFS_NAME = "gps_navigation_prefs"
+
+
+object GpsPrefsKeys {
+    val APP_OPEN_DID_SHOW = booleanPreferencesKey("app_open_did_show")
+}
+object GpsAdsKeys {
+    val ONBOARDING_INTERSTITIAL_DID_SHOW =
+        booleanPreferencesKey("onboarding_interstitial_did_show")
+
+    /**
+     * When true: next feature interstitial attempt should be skipped once.
+     * This becomes true if AppOpen OR Onboarding interstitial actually showed.
+     */
+    val SKIP_NEXT_FEATURE_INTERSTITIAL =
+        booleanPreferencesKey("skip_next_feature_interstitial")
+}
+
+suspend fun Context.markSkipNextFeatureInterstitial() {
+    gpsDataStore.edit { prefs ->
+        prefs[GpsAdsKeys.SKIP_NEXT_FEATURE_INTERSTITIAL] = true
+    }
+}
+
+suspend fun Context.setOnboardingInterstitialDidShow(value: Boolean) {
+    gpsDataStore.edit { prefs ->
+        prefs[GpsAdsKeys.ONBOARDING_INTERSTITIAL_DID_SHOW] = value
+    }
+
+    // If onboarding interstitial actually showed => mark skip-next-feature-interstitial
+    if (value) {
+        markSkipNextFeatureInterstitial()
+    }
+}
 
 suspend fun Context.reverseGeocodeName(
     lat: Double,

@@ -114,6 +114,7 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="rate_us">Rate Us</string>
     <string name="ride_details">Ride Details</string>
-
+    <item name="tag_banner_adview" type="id" />
+    <item name="tag_banner_adunit" type="id" />
 
 </resources>

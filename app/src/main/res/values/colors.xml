@@ -6,4 +6,27 @@
     <color name="gray">#6C6D6D</color>
     <color name="gray_btn_bg_color">#6C6D6D</color>
     <color name="colorPrimary">#346AFF</color>
+
+    <color name="gps_bg_light">#DDEBFB</color>
+
+    <color name="gps_primary">#4D78E6</color>
+    <color name="gps_primary_dark">#2D5AE8</color>
+
+    <color name="gps_yellow">#F2D000</color>
+    <color name="gps_green">#49F0AE</color>
+
+    <color name="gps_blue">#4E7BFF</color>
+    <color name="gps_orange">#C34A00</color>
+    <color name="gps_yellow2">#E3A500</color>
+    <color name="gps_dark_blue">#0F6FB5</color>
+    <color name="gps_cyan">#09B4D8</color>
+    <color name="gps_green2">#49B200</color>
+    <color name="gnt_white">#FFFFFF</color>
+    <color name="gnt_red">#FF0000</color>
+    <color name="gnt_green">#00FF00</color>
+    <color name="gnt_blue">#4285f4</color>
+    <color name="gnt_ad_green">#3A6728</color>
+    <color name="gnt_gray">#808080</color>
+    <color name="gnt_outline">#E0E0E0</color>
+    <color name="golden">#FF9800</color>
 </resources>

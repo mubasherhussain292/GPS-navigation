@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "655507037132",
+    "project_id": "gps-map-a5089",
+    "storage_bucket": "gps-map-a5089.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655507037132:android:06870f997b106b26b6db69",
+        "android_client_info": {
+          "package_name": "com.sgs.gps.navigation.map.streetview"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP65gk8TBEv2oiuHBLt2kXyGAr0G0t3Cc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      },
+      "admob_app_id": "ca-app-pub-8749879792203560~8658876106"
+    }
+  ],
+  "configuration_version": "1"
+}

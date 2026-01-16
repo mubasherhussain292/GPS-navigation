@@ -37,6 +37,7 @@ import com.example.gpsnavigation.R
 import com.example.gpsnavigation.adapters.RecentAdapter
 import com.example.gpsnavigation.db.AppDatabase
 import com.example.gpsnavigation.db.Recent
+import com.example.gpsnavigation.utils.AdsRemoteConfig
 import com.example.gpsnavigation.utils.MyConstants
 import com.example.gpsnavigation.utils.Utils.logUserEvent
 import com.example.gpsnavigation.utils.setDebouncedClickListener
@@ -199,6 +200,7 @@ class MapBoxSearchCompleteActivity : AppCompatActivity() {
 
         db = AppDatabase.getDatabase(this)
         dao = db.recentDao()
+
 
         searchPlaceView = findViewById<SearchPlaceBottomSheetView>(R.id.search_place_view).apply {
             initialize(CommonSearchViewConfiguration())

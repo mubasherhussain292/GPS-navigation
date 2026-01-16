@@ -6,6 +6,7 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -36,7 +37,9 @@ class CompassActivity : AppCompatActivity() , SensorEventListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        findViewById<View>(R.id.ivBack).setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
         compassNeedle = findViewById(R.id.iv_compass_needle)
 
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
